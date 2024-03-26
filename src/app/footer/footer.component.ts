@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-footer',
@@ -8,7 +7,7 @@ import { environment } from 'src/environments/environment';
 })
 export class FooterComponent implements OnInit {
   year: number = new Date().getFullYear();
-  GitHub: string = environment.GITHUB;
+  GitHub: string = 'https://github.com/singhnitin2004';
   constructor() { }
 
   ngOnInit(): void {

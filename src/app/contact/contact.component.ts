@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { environment } from 'src/environments/environment';
 import { AppService } from '../app.service';
 import { Contact } from '../app.interface';
 
@@ -13,15 +12,15 @@ export class ContactComponent implements OnInit {
   Form!: FormGroup;
   alert: boolean = false;
   socialList = [{
-    url: environment.GITHUB,
+    url: 'https://github.com/singhnitin2004',
     icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/github.svg',
     style: ''
   }, {
-    url: environment.UPWORK,
+    url: 'https://www.upwork.com/freelancers/~015609714aba33348b?viewMode=1',
     icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/upwork.svg',
     style: 'filter: invert(69%) sepia(100%) saturate(322%) hue-rotate(50deg) brightness(91%) contrast(95%);'
   }, {
-    url: environment.EMAIL,
+    url: 'mailto:singhnitin2004@gmail.com',
     icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/gmail.svg',
     style: 'filter: invert(32%) sepia(77%) saturate(1154%) hue-rotate(334deg) brightness(94%) contrast(91%);'
   }]
