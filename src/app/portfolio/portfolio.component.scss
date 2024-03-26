@@ -27,7 +27,6 @@
 
 
 
-/* Define a new animation for repeating the typing animation every 20 seconds */
 @keyframes repeat-typing {
     0% {
         width: 0;
@@ -37,5 +36,3 @@
         width: 17ch;
     }
 }
-
-/* Apply the repeating typing animation every 20 seconds */
