@@ -31,10 +31,10 @@ export class HeaderComponent implements OnInit {
       else if (window.pageYOffset >= 3095 && window.pageYOffset <= 4005) {
         this.selectedIndex = 4;
       }
-      else if (window.pageYOffset >= 4005 && window.pageYOffset <= 5004) {
+      else if (window.pageYOffset >= 4605 && window.pageYOffset <= 5604) {
         this.selectedIndex = 5;
       }
-      else if (window.pageYOffset >= 5004 && window.pageYOffset <= 9261) {
+      else if (window.pageYOffset >= 5604 && window.pageYOffset <= 9261) {
         this.selectedIndex = 6;
       }
     };
