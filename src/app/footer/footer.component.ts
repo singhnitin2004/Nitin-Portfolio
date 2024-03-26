@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class FooterComponent implements OnInit {
   year: number = new Date().getFullYear();
-  // GitHub: string = environment.GITHUB;
+  GitHub: string = environment.GITHUB;
   constructor() { }
 
   ngOnInit(): void {
