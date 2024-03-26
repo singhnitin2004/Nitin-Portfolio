@@ -13,15 +13,15 @@ export class ContactComponent implements OnInit {
   Form!: FormGroup;
   alert: boolean = false;
   socialList = [{
-    // url: environment.GITHUB,
+    url: environment.GITHUB,
     icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/github.svg',
     style: ''
   }, {
-    // url: environment.UPWORK,
+    url: environment.UPWORK,
     icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/upwork.svg',
     style: 'filter: invert(69%) sepia(100%) saturate(322%) hue-rotate(50deg) brightness(91%) contrast(95%);'
   }, {
-    // url: environment.EMAIL,
+    url: environment.EMAIL,
     icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/gmail.svg',
     style: 'filter: invert(32%) sepia(77%) saturate(1154%) hue-rotate(334deg) brightness(94%) contrast(91%);'
   }]
