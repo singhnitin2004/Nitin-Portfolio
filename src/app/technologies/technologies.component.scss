@@ -1,0 +1,27 @@
+.wrapper .icon {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    left: 35px;
+    opacity: 1;
+    transform: rotate(360deg);
+    background-color: rgb(56 189 248);
+    color: #ffffff;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}

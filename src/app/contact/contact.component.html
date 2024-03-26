@@ -1,0 +1,122 @@
+<section id="contact">
+    <div class="bg-sky-400" style="clip-path: polygon(50% 80px,100% 0,100% 100%,0 100%,0 0);">
+        <div class="container mx-auto mt-96 pt-24 mb-0">
+            <div class="text-center pt-24">
+
+                <span class="font-bold text-white lg:text-6xl md:text-6xl text-4xl border-b-4 border-white"
+                    data-aos="fade-right" data-aos-duration="1000">CONTACT</span>
+
+                <div data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="mt-16 text-white text-2xl font-semibold">Have a question? Want to Collaborate? Just want
+                        to
+                        chat?</div>
+                    <div class="text-white text-2xl  font-semibold">Reach out to me on</div>
+                </div>
+                <!-- <div class="flex justify-center mt-8 md:justify-center">
+                    <a [href]="item.url" target="_blank" *ngFor="let item of socialList;let i=index" data-aos="slide-up"
+                        [attr.data-aos-duration]="500 + (i * 100)"
+                        class="group cursor-pointer rounded-full  bg-sky-400 hover:bg-white red p-4 lg:mr-4 md:mr-6 lg:block mr-2 w-14 h-14 lg:w-16 lg:h-16">
+                        <div class="">
+                            <img [src]="item.icon" class="block w-8 group-hover:hidden invert" alt="icon search">
+                            <img [src]="item.icon" class="hidden w-8 group-hover:block" [style]="item.style"
+                                alt="icon search hover">
+                        </div>
+                    </a>
+
+                </div> -->
+                <div data-aos="slide-up" data-aos-duration="1100">
+                    <div class="text-white text-2xl font-semibold mt-8">Send me a message</div>
+                    <form [formGroup]="Form">
+                        <div>
+                            <div class="">
+                                <input
+                                    class="w-8/12 mt-8 bg-white text-black border border-gray-200 rounded-xl py-4 px-4 leading-tight focus:outline-none focus:bg-gray-300 focus:border-gray-300 hover:bg-gray-300 hover:border-gray-300 focus:placeholder-white text-2xl placeholder-slate-500 "
+                                    id="grid-first-name" type="text" placeholder="Full Name" name="fullName"
+                                    formControlName="fullName">
+                                <div></div>
+                                <h1 class="text-2xl text-white mt-4"
+                                    *ngIf="form['fullName'] && form['fullName'].invalid && form['fullName'].touched">
+                                    <div>
+                                        <div class="p-2 bg-red-500 rounded-xl inline"
+                                            *ngIf="form['fullName']?.errors?.['required']">
+                                            <i class="fa-solid fa-circle-exclamation mr-4 pl-2 "></i>Enter Your Full
+                                            Name.
+                                        </div>
+                                    </div>
+                                </h1>
+                            </div>
+                            <div class="">
+                                <input
+                                    class="w-8/12 mt-4 bg-white text-black border border-gray-200 rounded-xl py-4 px-4 leading-tight focus:outline-none focus:bg-gray-300 focus:border-gray-300 hover:bg-gray-300 hover:border-gray-300 focus:placeholder-white text-2xl placeholder-slate-500"
+                                    id="grid-last-name" type="text" placeholder="Email" name="email"
+                                    formControlName="email">
+                                <h1 class="text-2xl text-white mt-4"
+                                    *ngIf="form['email'] && form['email'].invalid && form['email'].touched">
+                                    <div class="p-2 bg-red-500 rounded-xl inline"
+                                        *ngIf="form['email']?.errors?.['required']"><i
+                                            class="fa-solid fa-circle-exclamation mr-4 pl-2"></i>Email is
+                                        required.</div>
+                                    <div class="p-2 bg-red-500 rounded-xl inline"
+                                        *ngIf="form['email']?.errors?.['email']">
+                                        <i class="fa-solid fa-circle-exclamation mr-4 pl-2"></i>Please include an
+                                        '@'in the email
+                                        address
+                                    </div>
+                                </h1>
+                            </div>
+                            <div class="">
+                                <input
+                                    class="w-8/12 mt-4 bg-white text-black border border-gray-200 rounded-xl py-4 px-4 leading-tight focus:outline-none focus:bg-gray-300 focus:border-gray-300 hover:bg-gray-300 hover:border-gray-300 focus:placeholder-white text-2xl placeholder-slate-500"
+                                    id="grid-mail" type="text" placeholder="Subject" name="subject"
+                                    formControlName="subject">
+                                <h1 class="text-2xl text-white mt-4"
+                                    *ngIf="form['subject'] && form['subject'].invalid && form['subject'].touched">
+                                    <div class="p-2 bg-red-500 rounded-xl inline"
+                                        *ngIf="form['subject']?.errors?.['required']"><i
+                                            class="fa-solid fa-circle-exclamation mr-4 pl-2"></i>Subject must contain at
+                                        least 4 characters</div>
+                                    <div class="p-2 bg-red-500 rounded-xl inline"
+                                        *ngIf="form['subject']?.errors?.['minlength']">
+                                        <i class="fa-solid fa-circle-exclamation mr-4 pl-2 "></i>Subject must contain at
+                                        least 4 characters
+                                    </div>
+                                </h1>
+                            </div>
+                            <div class="">
+                                <textarea
+                                    class="w-8/12 mt-4 bg-white text-black border border-gray-200 rounded-xl py-8 px-4 leading-tight focus:outline-none focus:bg-gray-300 focus:border-gray-300 hover:bg-gray-300 hover:border-gray-300 focus:placeholder-white text-2xl placeholder-slate-500"
+                                    id="grid-message" type="text" placeholder="Message" name="message"
+                                    formControlName="message"></textarea>
+                                <h1 class="text-2xl text-white mt-4"
+                                    *ngIf="form['message'] && form['message'].invalid && form['message'].touched">
+                                    <div class="p-2 bg-red-500 rounded-xl inline"
+                                        *ngIf="form['message']?.errors?.['required']">
+                                        <i class="fa-solid fa-circle-exclamation mr-4 pl-2"></i>Message must contain at
+                                        least 20 characters
+                                    </div>
+                                    <div class="p-2 bg-red-500 rounded-xl inline"
+                                        *ngIf="form['message']?.errors?.['minlength']">
+                                        <i class="fa-solid fa-circle-exclamation mr-4 pl-2 "></i>Message must contain at
+                                        least 20 characters
+                                    </div>
+                                </h1>
+                            </div>
+                        </div>
+                    </form>
+                    <div *ngIf="alert"
+                        class="text-left text-lg mx-64 mt-8 message p-4 mb-4 text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800"
+                        role="alert" id="grid-success">
+                        <span class="w-8/12 font-semibold">I appreciate your message. I'll get back to you as soon as I
+                            can. </span>
+                    </div>
+                </div>
+                <div data-aos="slide-up" data-aos-duration="1100">
+                    <button (click)="saveContact()"
+                        class="mt-4 mb-16 bg-blue-900 hover:shadow-2xl font-bold text-white text-xl py-4 px-6 rounded-xl">Submit</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>

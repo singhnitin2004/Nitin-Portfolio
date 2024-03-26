@@ -1,0 +1,13 @@
+.even {
+    direction: ltr;
+}
+
+.odd {
+    direction: rtl;
+}
+
+@media (max-width: 370px) {
+    .experience-desc {
+        padding: 1rem;
+    }
+}

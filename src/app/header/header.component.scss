@@ -1,0 +1,24 @@
+header {
+    background-color: rgb(243 244 246);
+    width: 100%;
+    padding: 5px 0px;
+    box-shadow: none;
+}
+
+.header-change {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 0 24px -6px;
+}
+
+li {
+    color: #11111180;
+}
+
+.active {
+    border-bottom: 2px solid #03a9f4;
+    color: #03a9f4;
+}

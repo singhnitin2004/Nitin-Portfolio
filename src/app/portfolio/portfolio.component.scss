@@ -1,0 +1,41 @@
+.border-8 {
+    border-width: 15px !important;
+}
+
+.wrapper {
+    display: grid;
+    place-items: center;
+}
+
+.typing-demo {
+    width: 17ch;
+    animation: typing 5s steps(18), blink 1s step-end infinite, repeat-typing 5s infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 17ch;
+    }
+}
+
+
+
+/* Define a new animation for repeating the typing animation every 20 seconds */
+@keyframes repeat-typing {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 17ch;
+    }
+}
+
+/* Apply the repeating typing animation every 20 seconds */

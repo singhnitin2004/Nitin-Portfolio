@@ -1,0 +1,25 @@
+<section id="achievement">
+    <div class="wrapper container mx-auto mt-96 pt-24 items-center">
+        <div class="text-center font-bold text-6xl  scale-125" data-aos="fade-left" data-aos-duration="1100">
+            <span class="font-lg lg:text-6xl md:text-4xl text-3xl  border-b-4 border-black">TECHNOLOGIES AND
+            </span>
+            <span
+                class="font-lg text-sky-400 lg:text-6xl md:text-4xl text-3xl mt-6  border-b-4 border-black">TOOLS</span>
+        </div>
+        <div class="mt-24 mx-4" *ngFor="let dev of developments">
+            <div class="font-lg font-bold lg:text-4xl sm:text-2xl text-3xl text-center hover:underline hover:text-sky-400"
+                data-aos="fade-right">
+                {{dev.category}}
+            </div>
+            <div class="flex flex-wrap justify-center items-center" data-aos="fade-left">
+                <div *ngFor="let item of dev.list">
+                    <div class="icon">
+                        <div class="tooltip">{{item.name}}</div>
+                        <img [src]="item.icon" [alt]="item.name"
+                            class="lg:w-20 md:w-20 sm:w-20 w-16 p-2 mt-12 cursor-pointer  mx-6 transition duration-500 transform hover:scale-125">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,27 @@
+<section id="experience">
+    <div class="container p-5  mx-auto mt-96 pt-40">
+        <div class="text-center">
+            <span class="font-bold lg:text-6xl md:text-6xl text-4xl border-b-4 border-black"
+                data-aos="fade-up">EXPERIENCE</span>
+        </div>
+        <div class="lg:grid lg:grid-cols-3 items-center md:grid-cols-2 mt-4"
+            [attr.data-aos]="isOdd?'fade-right':'fade-left'" id="trigger-right"
+            *ngFor="let item of lstExperience; odd as isOdd; even as isEven;" [ngClass]="{even: isEven, odd: isOdd}">
+            <div>
+                <img src={{item.image}}
+                    class="scale-90  rounded-3xl hover:shadow-2xl transition duration-500 transform hover:scale-95 hover:bg-slate-300 w-64 lg:w-96 sm:w-96 md:w-96"
+                    alt="">
+            </div>
+            <div class="col-span-2 experience-desc">
+                <h1 class="lg:text-2xl md:text-2xl text-xl font-semibold">{{item.heading}}</h1>
+                <h2 class="text-lg text-gray-400 font-semibold">{{item.name}}</h2>
+                <p class="mt-2 text-gray-400">{{item.description}}</p>
+                <!-- <div class="">
+                    <a [href]="item.url" *ngIf="item.url" target="_blank">
+                        <i class="fa-solid fa-globe text-2xl"></i>
+                    </a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</section>
