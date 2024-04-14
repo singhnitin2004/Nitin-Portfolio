@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./technologies.component.scss']
 })
 export class TechnologiesComponent implements OnInit {
-  developments = [{
+  developments = [
+    {
     category: 'TECHNOLOGIES',
     list: [{
       name: 'Angular',
@@ -18,16 +19,17 @@ export class TechnologiesComponent implements OnInit {
       name: 'Typescript',
       icon: 'assets/svg/typescript.svg'
     }, {
-      name: 'Angular',
-      icon: 'assets/svg/html5.svg'
+      name: 'HTML5',
+      icon: 'assets/svg/html.svg'
     }, {
-      name: 'CSS',
+      name: 'CSS3',
       icon: 'assets/svg/css3.svg'
     }, {
-      name: 'SCSS',
-      icon: 'assets/svg/scss.svg'
+      name: 'Next.js',
+      icon: 'assets/svg/next.svg'
     }]
-  }, {
+  },
+   {
     category: 'LIBRARIES',
     list: [{
       name: 'Ngrx',
@@ -36,21 +38,36 @@ export class TechnologiesComponent implements OnInit {
       name: 'Bootstrap',
       icon: 'assets/svg/bootstrap.svg'
     }, {
-      name: 'Tailwind Css',
+      name: 'Tailwind CSS',
       icon: 'assets/svg/tailwind.svg'
-    }, ]
+    }]
   }, {
-    category: 'DATABASES',
-    list: [ {
-      name: 'MySql',
+    category: 'BACKEND',
+    list: [{
+      name: 'MySQL',
       icon: 'assets/svg/mysql.svg'
     },{
-      name: 'Sqlite',
+      name: 'SQLite',
       icon: 'assets/svg/sqlite.svg'
     }]
-  }, ]
-  ngOnInit(): void {
+  },
+];
 
+  selectedCategory: string | null = null;
+
+  ngOnInit(): void {
+    this.selectCategory('TECHNOLOGIES');
   }
 
+  selectCategory(category: string): void {
+    this.selectedCategory = category;
+  }
+
+  clearSelection(): void {
+    this.selectedCategory = null;
+  }
+
+  isCategorySelected(category: string): boolean {
+    return this.selectedCategory === category;
+  }
 }

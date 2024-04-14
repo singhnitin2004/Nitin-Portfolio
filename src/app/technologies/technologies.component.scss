@@ -21,7 +21,11 @@
     left: 35px;
     opacity: 1;
     transform: rotate(360deg);
-    background-color: rgb(56 189 248);
+    background-color: rgba(244, 114, 182, 1);
     color: #ffffff;
     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.max{
+    display: ruby;
 }
