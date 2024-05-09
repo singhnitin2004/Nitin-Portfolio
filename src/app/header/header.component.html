@@ -1,4 +1,4 @@
-<header class="fixed">
+<header id="" class="fixed">
     <div class="container flex flex-wrap justify-between items-center mx-auto">
         <a href="#" class="flex text-sky-500
          items-center">
@@ -11,9 +11,13 @@
             <ul
                 class="hidden md:flex flex-col p-4 mt-4 bg-[#fff] rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
                 <li [ngClass]="{'active':selectedIndex ==1}">
-                    <a href="#"
+                    <a href="#portfolio"
                         class="block py-2 pr-2 pl-2 lg:text-lg md:text-sm rounded md:bg-transparent md:p-0 onclick:border-b-yellow-900  "
                         aria-current="page">HOME</a>
+                </li>
+                <li [ngClass]="{'active':selectedIndex ==4}">
+                    <a href="#about" class="block py-2 pr-2 pl-2  lg:text-lg  md:text-sm rounded 
+                         md:hover:bg-transparent md:border-0  hover:text-lime-400 md:p-0">ABOUT</a>
                 </li>
                 <li [ngClass]="{'active':selectedIndex ==2}">
                     <a href="#experience" class="block py-2  border-b-yellow-900  pr-2 pl-2 lg:text-lg md:text-sm rounded 
@@ -23,14 +27,8 @@
                     <a href="#achievement" class="block py-2 pr-2 pl-2  lg:text-lg md:text-sm rounded  
                          md:hover:bg-transparent md:border-0  hover:text-lime-400 md:p-0">EXPERTISE</a>
                 </li>
-                <li [ngClass]="{'active':selectedIndex ==4}">
-                    <a href="#about" class="block py-2 pr-2 pl-2  lg:text-lg  md:text-sm rounded 
-                         md:hover:bg-transparent md:border-0  hover:text-lime-400 md:p-0">ABOUT</a>
-                </li>
-                <li [ngClass]="{'active':selectedIndex ==5}">
-                    <a href="#blog" class="block py-2 pr-2 pl-2  lg:text-lg md:text-sm rounded 
-                         md:hover:bg-transparent md:border-0  hover:text-lime-400 md:p-0">BLOGS</a>
-                </li>
+
+                
                 <li [ngClass]="{'active':selectedIndex ==6}">
                     <a href="#contact" class="block py-2 pr-2 pl-2  lg:text-lg md:text-sm rounded 
                           md:hover:bg-transparent md:border-0 hover:text-lime-400 md:p-0">CONTACT</a>
@@ -39,28 +37,25 @@
             <ul *ngIf="mobileMenu"
                 class="md:hidden block flex-col p-4 mt-4 bg-gray-100 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 ">
                 <li [ngClass]="{'active':selectedIndex ==1}">
-                    <a href="#" (click)="selectedIndex = 1"
+                    <a href="#portfolio" (click)="handleMenuItemClick(1)" 
                         class="block py-2 pr-2 pl-2 lg:text-lg md:text-sm rounded md:bg-transparent md:p-0 onclick:border-b-yellow-900 "
                         aria-current="page">HOME</a>
                 </li>
+                <li [ngClass]="{'active':selectedIndex ==4}">
+                    <a href="#about" (click)="handleMenuItemClick(4)" class="block py-2 pr-2 pl-2  lg:text-lg  md:text-sm rounded 
+                                     ">ABOUT</a>
+                </li>
                 <li [ngClass]="{'active':selectedIndex ==2}">
-                    <a href="#experience" (click)="selectedIndex = 2" class="block py-2  border-b-yellow-900  pr-2 pl-2 lg:text-lg md:text-sm  rounded 
+                    <a href="#experience"(click)="handleMenuItemClick(2)" class="block py-2  border-b-yellow-900  pr-2 pl-2 lg:text-lg md:text-sm  rounded 
                                       ">EXPERIENCE</a>
                 </li>
                 <li [ngClass]="{'active':selectedIndex ==3}">
-                    <a href="#achievement" (click)="selectedIndex = 3" class="block py-2 pr-2 pl-2  lg:text-lg md:text-sm rounded 
+                    <a href="#achievement" (click)="handleMenuItemClick(3)" class="block py-2 pr-2 pl-2  lg:text-lg md:text-sm rounded 
                                      ">ACHIEVEMENTS</a>
                 </li>
-                <li [ngClass]="{'active':selectedIndex ==4}">
-                    <a href="#about" (click)="selectedIndex = 4" class="block py-2 pr-2 pl-2  lg:text-lg  md:text-sm rounded 
-                                     ">ABOUT</a>
-                </li>
-                <li [ngClass]="{'active':selectedIndex ==5}">
-                    <a href="#blog" (click)="selectedIndex = 5" class="block py-2 pr-2 pl-2  lg:text-lg md:text-sm rounded 
-                                     ">BLOGS</a>
-                </li>
+
                 <li [ngClass]="{'active':selectedIndex ==6}">
-                    <a href="#contact" (click)="selectedIndex = 6" class="block py-2 pr-2 pl-2  lg:text-lg md:text-sm rounded 
+                    <a href="#contact" (click)="handleMenuItemClick(6)" class="block py-2 pr-2 pl-2  lg:text-lg md:text-sm rounded 
                                       ">CONTACT</a>
                 </li>
             </ul>

@@ -16,29 +16,37 @@ export class HeaderComponent implements OnInit {
     this.mobileMenu = !this.mobileMenu;
   }
 
+
+  handleMenuItemClick(index: number) {
+    this.selectedIndex = index;
+    this.closeMobileMenu();
+  }
+
+  closeMobileMenu() {
+    this.mobileMenu = false;
+  }
+
   ngOnInit(): void {
     window.onscroll = () => {
       if (this.mobileMenu) return;
-      if (window.pageYOffset >= 0 && window.pageYOffset <= 700) {
+      if (window.pageYOffset >= 0 && window.pageYOffset <= 777) {
         this.selectedIndex = 1;
       }
-      else if (window.pageYOffset >= 800 && window.pageYOffset <= 1795) {
-        this.selectedIndex = 2;
-      }
-      else if (window.pageYOffset >= 1795 && window.pageYOffset <= 3095) {
-        this.selectedIndex = 3;
-      }
-      else if (window.pageYOffset >= 3095 && window.pageYOffset <= 4005) {
+      else if (window.pageYOffset >= 777 && window.pageYOffset <= 1795) {
         this.selectedIndex = 4;
       }
-      else if (window.pageYOffset >= 4605 && window.pageYOffset <= 5004) {
-        this.selectedIndex = 5;
+      else if (window.pageYOffset >= 1795 && window.pageYOffset <= 3095) {
+        this.selectedIndex = 2;
       }
-      else if (window.pageYOffset >= 5004 && window.pageYOffset <= 9261) {
+      else if (window.pageYOffset >= 3095 && window.pageYOffset <= 4185.5556640625) {
+        this.selectedIndex = 3;
+      }
+      else if (window.pageYOffset >= 4185.5556640625 && window.pageYOffset <= 5004) {
         this.selectedIndex = 6;
       }
     };
   }
+  
 
   header_variable = false;
   @HostListener("document:scroll")
